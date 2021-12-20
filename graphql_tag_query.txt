@@ -1,0 +1,32 @@
+
+{
+  repository(owner: "sofcalca", name: "accelerate-dojo-playground") {
+    tags: refs(refPrefix: "refs/tags/", first: 100, orderBy: {field:TAG_COMMIT_DATE, direction:DESC}) {
+      edges {
+        tag: node {
+          name
+          target {
+            __typename
+            ... on Tag {
+              tagger {
+                date
+              }
+            }
+            ... on Commit {
+              author {
+                name
+                email
+                date
+              }
+              committedDate
+            }
+          }
+        }
+      }
+      pageInfo{
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
