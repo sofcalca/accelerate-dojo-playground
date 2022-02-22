@@ -1,0 +1,16 @@
+{
+  "name": "accelerate-dojo-playground",
+  "version": "1.0.0",
+  "description": "Découvrir & calculer les métriques Accelerat",
+  "main": "main.js",
+  "repository": "https://github.com/sofcalca/accelerate-dojo-playground.git",
+  "author": "tribu-accelerate@octo.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "got": "^12.0.1"
+  }
+}
