@@ -1,0 +1,20 @@
+{
+  repository(owner: "sofcalca", name: "accelerate-dojo-playground") {
+    defaultBranchRef {
+      target{
+        ... on Commit{
+          history(first:100){
+            edges{
+              node{
+                ... on Commit{
+                  committedDate
+                  oid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
